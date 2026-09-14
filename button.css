@@ -1,0 +1,36 @@
+:root {
+  --color-accent: #ff6600;
+  --color-accent-hover: #234ec2;
+  --color-accent-active: #1c3f9e;
+  --radius-md: 8px;
+}
+
+.btn {
+  border-radius: var(--radius-md);
+  border: none;
+  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent);
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 120ms ease, transform 80ms ease;
+}
+
+.btn:hover {
+  background: var(--color-accent-hover);
+}
+
+.btn:active {
+  background: var(--color-accent-active);
+  transform: translateY(1px);
+}
+
+.btn:focus-visible {
+  outline: 2px solid #1c1b1a;
+  outline-offset: 2px;
+}

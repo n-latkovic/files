@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Settings</title>
+<link rel="stylesheet" href="button.css">
+<style>
+  body { font-family: sans-serif; padding: 48px; background: #f7f5f2; color: #1c1b1a; }
+  nav a { margin-right: 16px; font-size: 13px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Dashboard</a>
+  <a href="settings.html">Settings</a>
+</nav>
+
+<h1>Settings</h1>
+<p>Different page, same import. Edit components/Button.js and reload BOTH pages — both change.</p>
+<div id="mount"></div>
+
+<script type="module">
+  import { createButton } from './Button.js';
+
+  const updateBtn = createButton('Update profile', () => alert('Updated from Settings'));
+  document.getElementById('mount').appendChild(updateBtn);
+</script>
+
+</body>
+</html>

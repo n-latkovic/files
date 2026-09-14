@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<link rel="stylesheet" href="button.css">
+<style>
+  body { font-family: sans-serif; padding: 48px; background: #f7f5f2; color: #1c1b1a; }
+  nav a { margin-right: 16px; font-size: 13px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Dashboard</a>
+  <a href="settings.html">Settings</a>
+</nav>
+
+<h1>Dashboard</h1>
+<p>This page imports the SAME button module as Settings does.</p>
+<div id="mount"></div>
+
+<script type="module">
+  // This is the import doing real work: the actual button
+  // code lives in components/Button.js, not here.
+  import { createButton } from './Button.js';
+
+  const saveBtn = createButton('Save changes', () => alert('Saved from Dashboard'));
+  document.getElementById('mount').appendChild(saveBtn);
+</script>
+
+</body>
+</html>
